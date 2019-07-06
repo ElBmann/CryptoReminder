@@ -1,4 +1,3 @@
-const crypto = require('./src/utils/cryptoCompare')
 const sendEmail = require('./src/emails/account')
 let schedule = require('node-schedule')
 const express = require('express')
@@ -17,24 +16,17 @@ const express = require('express')
 
     app.get('',(req, res)=>{
 
-        
+        res.send('Hello There')
 
         var rule = new schedule.RecurrenceRule();
         rule.dayOfWeek = [0, new schedule.Range(1, 6)]
         rule.hour =  [9,12,16,21]; 
-        rule.minute = 0;
+        rule.minute = 00;
          
         var j = schedule.scheduleJob(rule, ()=>{
 
-            crypto((cryptoCurrency)=>{
-
-                const XRP_USD = cryptoCurrency.cryptoCompare.XRP.USD;
-                const ETH_USD = cryptoCurrency.cryptoCompare.ETH.USD;
-                const LINK_USD = cryptoCurrency.cryptoCompare.LINK.USD;
-
                 sendEmail(()=>{})
             
-            })
         })//schedule
 
     })
