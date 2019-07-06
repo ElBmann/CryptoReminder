@@ -6,7 +6,7 @@ const cryptoCompare=(callback)=>{
     const url = 'https://min-api.cryptocompare.com/data/pricemulti?fsyms=ETH,XRP,LINK&tsyms=BTC,USD,EUR&api_key=https://min-api.cryptocompare.com/data/pricemulti?fsyms=ETH,XRP&tsyms=USD,EUR&api_key='+ process.env.CC_KEY
 
     request({url: url, json: true},(error,response,body)=>{
-        console.log(response.body)
+       // console.log(response.body)
         if(error){
             //Might have an text sent if server/internet issues
             callback('no service check your internet', undefined)
