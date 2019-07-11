@@ -34,7 +34,7 @@ const account = () =>{
        text: 'XRP/USD: '+ XRP_USD + '\n' +
              'ETH/USD: ' + ETH_USD
       }
-    }else if(LINK_USD <= 3.00){
+    }else if(LINK_USD <= 4.00){
       var mailOptions ={
         from: process.env.NODEMAILER_EMAIL,
         to:'recub35@gmail.com',
