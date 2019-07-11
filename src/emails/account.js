@@ -17,9 +17,13 @@ const account = () =>{
 
   crypto((cryptoCurrency)=>{
 
-    const XRP_USD = cryptoCurrency.cryptoCompare.XRP.USD;
-    const ETH_USD = cryptoCurrency.cryptoCompare.ETH.USD;
-    const LINK_USD = cryptoCurrency.cryptoCompare.LINK.USD;
+    const XRP_USD = cryptoCurrency.cryptoCompare.XRP.USD
+    const ETH_USD = cryptoCurrency.cryptoCompare.ETH.USD
+    const LINK_USD = cryptoCurrency.cryptoCompare.LINK.USD
+    const MIOTA_USD = cryptoCurrency.cryptoCompare.MIOTA.USD
+
+    console.log('MIOTA_USD:  ' + MIOTA_USD)
+
 
     if(XRP_USD >= 1.00 || ETH_USD >= 500){
 

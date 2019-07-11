@@ -5,7 +5,7 @@ const express = require('express')
 /* TODO: 
     1. Add Email/Text Function [✔]
     2. create scheduler [✔]
-    3. upload to web server
+    3. upload to web server [✔]
     4. Call a buy order at a certain price
     5. Move to Ledger
     6. Move money from ledger to exchange
@@ -21,8 +21,9 @@ const express = require('express')
 
         var rule = new schedule.RecurrenceRule();
         rule.dayOfWeek = [0, new schedule.Range(1, 6)]
-        rule.hour =  [9,12,16,21]; 
-        rule.minute = 00;
+        //9AM, 12PM, 4PM, 9PM
+        rule.hour =  [9,10,11,12,13,14,15,16,17,18,19,20,21,22,23]; 
+        rule.minute = 25;
          
         var j = schedule.scheduleJob(rule, ()=>{
 
