@@ -22,8 +22,8 @@ const express = require('express')
         var rule = new schedule.RecurrenceRule();
         rule.dayOfWeek = [0, new schedule.Range(1, 6)]
         //9AM, 12PM, 4PM, 9PM
-        rule.hour =  [9,10,11,12,13,14,15,16,17,18,19,20,21,22,23]; 
-        rule.minute = 35;
+        rule.hour =  [4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23]; 
+        rule.minute = 00;
          
         var j = schedule.scheduleJob(rule, ()=>{
 

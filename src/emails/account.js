@@ -25,7 +25,7 @@ const account = () =>{
     console.log('MIOTA_USD:  ' + MIOTA_USD)
 
 
-    if(XRP_USD >= 1.00 || ETH_USD >= 500){
+    if(XRP_USD >= 1.00 || ETH_USD >= 400){
 
       var mailOptions ={
        from: process.env.NODEMAILER_EMAIL,
@@ -34,7 +34,7 @@ const account = () =>{
        text: 'XRP/USD: '+ XRP_USD + '\n' +
              'ETH/USD: ' + ETH_USD
       }
-    }else if(LINK_USD <= 4.00){
+    }else if(LINK_USD <= 3.00){
       var mailOptions ={
         from: process.env.NODEMAILER_EMAIL,
         to:'recub35@gmail.com',
